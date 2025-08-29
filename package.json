@@ -1,0 +1,76 @@
+{
+  "name": "frontsense",
+  "version": "0.1.0",
+  "description": "React Dev Tools on steroids - Runtime branch coverage analysis for performance optimization",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "vite",
+    "babel"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "demo": "vite --config vite.simple.config.ts",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "react",
+    "performance",
+    "coverage",
+    "analysis",
+    "branches",
+    "runtime",
+    "devtools"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "@babel/types": "^7.23.0",
+    "@babel/generator": "^7.23.0",
+    "d3": "^7.8.5",
+    "vis-network": "^9.1.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/babel__parser": "^7.1.1",
+    "@types/babel__traverse": "^7.20.3",
+    "@types/babel__generator": "^7.6.6",
+    "@types/d3": "^7.4.3",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-react": "^4.1.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vitest": "^0.34.6"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./vite": {
+      "import": "./dist/vite-plugin.js"
+    },
+    "./babel": {
+      "import": "./dist/babel-plugin.js"
+    }
+  }
+}
